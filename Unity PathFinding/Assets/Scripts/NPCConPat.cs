@@ -114,5 +114,10 @@ namespace Assets.Script
             _navMeshAgent.SetDestination(targetVector);
             _traveling = true;
         }
+        private void FixedUpdate()
+        {
+            if (Input.GetKey("escape"))
+                Application.Quit();
+        }
     }
 }
